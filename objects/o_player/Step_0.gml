@@ -1,5 +1,5 @@
 /// @description Player Logic
-clamp(stamina, 0, max_stamina)
+
 //Keys 
 var key_up = keyboard_check(vk_up) or keyboard_check(ord("W"))
 var key_down = keyboard_check(vk_down) or keyboard_check(ord("S"))
@@ -19,7 +19,7 @@ if(key_sprint and stamina > 0.1)
 	horiz_spd = horiz * run_speed
 	ver_spd = ver * run_speed		
 } else {
-	stamina += 0.2
+	if (stamina < max_stamina) stamina += 0.2 // Regen stamina if its below 100
 	horiz_spd = horiz * move_speed
 	ver_spd = ver * move_speed 		
 }

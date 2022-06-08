@@ -2,6 +2,8 @@
   "resources": [
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},"order":0,},
     {"id":{"name":"s_player","path":"sprites/s_player/s_player.yy",},"order":0,},
+    {"id":{"name":"f_text","path":"fonts/f_text/f_text.yy",},"order":0,},
+    {"id":{"name":"o_gamemanager","path":"objects/o_gamemanager/o_gamemanager.yy",},"order":1,},
     {"id":{"name":"r_island","path":"rooms/r_island/r_island.yy",},"order":0,},
   ],
   "Options": [
@@ -45,7 +47,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.3.0.625",
+    "IDEVersion": "2022.5.1.14",
   },
   "resourceVersion": "1.5",
   "name": "ProjectAngryFarmer",
