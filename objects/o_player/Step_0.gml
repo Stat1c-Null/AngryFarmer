@@ -25,3 +25,23 @@ y += ver_spd
 
 //Rotate player with the mouse
 image_angle = point_direction(x,y, mouse_x, mouse_y)
+
+//Shooting pistol
+firingdelay -= 1
+recoil = max(0, recoil - 1)
+
+if(mouse_check_button_pressed(mb_left) and firingdelay < 0) {
+	recoil = handgun_recoil
+	firingdelay = handgun_fire_del_amount
+	//Create bullet
+	with (instance_create_layer(x,y, "Bullets", o_bullet)) {
+		speed = handgun_bullet_speed
+		//Make bullet follow the mouse
+		direction = other.image_angle + random_range(-handgun_recoil, handgun_recoil)
+		image_angle = direction
+	}
+}
+
+//Push player backwards with Recoil
+x = x - lengthdir_x(recoil, image_angle)
+y = y - lengthdir_y(recoil, image_angle)

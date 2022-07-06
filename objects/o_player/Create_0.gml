@@ -5,7 +5,15 @@ run_speed = 6
 max_stamina = 100
 stamina = 100
 is_moving = false
-
+//Shooting variables
+firingdelay = 0
+recoil = 0
+//Handgun
+global.weapon_equipped = "handgun"
+handgun_fire_del_amount = 10 //Length between pistol shots
+handgun_bullet_speed = 25
+handgun_recoil = 2
+handgun_spread = 3
 
 
 
