@@ -23,6 +23,14 @@ if(key_sprint and stamina > 0.1 and is_moving)
 x += horiz_spd
 y += ver_spd
 
+//Collision with the wall
+if(place_meeting(x+horiz_spd,y,o_inv_wall)) {
+	horiz_spd = 0
+}
+if(place_meeting(x,y+ver_spd,o_inv_wall)) {
+	ver_spd = 0
+}
+
 //Rotate player with the mouse
 image_angle = point_direction(x,y, mouse_x, mouse_y)
 

@@ -19,7 +19,7 @@ if (mouse_check_button(mb_middle)) {
 } else {
 	//Follow the player 
 	//Set the target camera position
-	var targetX = o_player.x - camW/2 + 17
+	var targetX = o_player.x - camW/2 // + 17
 	var targetY = o_player.y - camH/2
 	
 	//Clamp the target to room bounds
@@ -35,7 +35,7 @@ if (mouse_check_button(mb_middle)) {
 var wheel = mouse_wheel_down() - mouse_wheel_up()
 
 if (wheel != 0){
-	wheel *= 0.1
+	wheel *= zoom_speed
 	
 	// Add to size
 	var addW = camW * wheel

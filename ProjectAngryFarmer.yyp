@@ -11,6 +11,7 @@
     {"id":{"name":"s_sand","path":"sprites/s_sand/s_sand.yy",},"order":5,},
     {"id":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"order":2,},
     {"id":{"name":"s_crosshair","path":"sprites/s_crosshair/s_crosshair.yy",},"order":3,},
+    {"id":{"name":"o_inv_wall","path":"objects/o_inv_wall/o_inv_wall.yy",},"order":4,},
     {"id":{"name":"movement_keys","path":"scripts/movement_keys/movement_keys.yy",},"order":1,},
     {"id":{"name":"s_player","path":"sprites/s_player/s_player.yy",},"order":1,},
     {"id":{"name":"r_island","path":"rooms/r_island/r_island.yy",},"order":0,},
