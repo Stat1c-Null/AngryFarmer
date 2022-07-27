@@ -11,7 +11,7 @@ recoil = 0
 //Handgun
 global.weapon_equipped = "handgun"
 handgun_fire_del_amount = 10 //Length between pistol shots
-handgun_bullet_speed = 25
+handgun_bullet_speed = 1
 handgun_recoil = 2
 handgun_spread = 3
 
