@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_player",
-    "path": "sprites/s_player/s_player.yy",
+    "name": "s_player_handgun",
+    "path": "sprites/s_player_handgun/s_player_handgun.yy",
   },
   "solid": false,
   "visible": true,

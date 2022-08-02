@@ -20,9 +20,6 @@ if(key_sprint and stamina > 0.1 and is_moving)
 	ver_spd = ver * move_speed 		
 }
 
-x += horiz_spd
-y += ver_spd
-
 //Collision with the wall
 if(place_meeting(x+horiz_spd,y,o_inv_wall)) {
 	horiz_spd = 0
@@ -31,25 +28,39 @@ if(place_meeting(x,y+ver_spd,o_inv_wall)) {
 	ver_spd = 0
 }
 
+x += horiz_spd
+y += ver_spd
+
 //Rotate player with the mouse
 image_angle = point_direction(x,y, mouse_x, mouse_y)
 
-//Shooting pistol
-firingdelay -= 1
-recoil = max(0, recoil - 1)
+//Weapon switch
+weapon_switch()
 
-if(mouse_check_button_pressed(mb_left) and firingdelay < 0) {
-	recoil = handgun_recoil
-	firingdelay = handgun_fire_del_amount
-	//Create bullet
-	with (instance_create_layer(x,y, "Bullets", o_bullet)) {
-		speed = handgun_bullet_speed
-		//Make bullet follow the mouse
-		direction = other.image_angle + random_range(-handgun_recoil, handgun_recoil)
-		image_angle = direction
-	}
+switch(global.weapon_equipped){
+	
+	case "handgun":
+		//Shooting pistol
+		firingdelay -= 1
+		recoil = max(0, recoil - 1)
+
+		if(mouse_check_button_pressed(mb_left) and firingdelay < 0) {
+			recoil = handgun_recoil
+			firingdelay = handgun_fire_del_amount
+			//Create bullet
+			with (instance_create_layer(x,y, "Bullets", o_bullet)) {
+				speed = handgun_bullet_speed
+				//Make bullet follow the mouse
+				direction = other.image_angle + random_range(-handgun_recoil, handgun_recoil)
+				image_angle = direction
+			}
+		}
+
+		//Push player backwards with Recoil
+		x = x - lengthdir_x(recoil, image_angle)
+		y = y - lengthdir_y(recoil, image_angle)
+	break
+	case "knife": 
+		image_speed = 1
+	break
 }
-
-//Push player backwards with Recoil
-x = x - lengthdir_x(recoil, image_angle)
-y = y - lengthdir_y(recoil, image_angle)
