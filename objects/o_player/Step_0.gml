@@ -37,6 +37,13 @@ image_angle = point_direction(x,y, mouse_x, mouse_y)
 //Weapon switch
 weapon_switch()
 
+//Switch weapons
+if (key_melee) {
+	global.weapon_equipped = "knife"
+} else if(key_secondary) {
+	global.weapon_equipped = "handgun"	
+}
+
 switch(global.weapon_equipped){
 	
 	case "handgun":
@@ -44,7 +51,7 @@ switch(global.weapon_equipped){
 		firingdelay -= 1
 		recoil = max(0, recoil - 1)
 
-		if(mouse_check_button_pressed(mb_left) and firingdelay < 0) {
+		if (key_attack and firingdelay < 0) {
 			recoil = handgun_recoil
 			firingdelay = handgun_fire_del_amount
 			//Create bullet
@@ -61,6 +68,22 @@ switch(global.weapon_equipped){
 		y = y - lengthdir_y(recoil, image_angle)
 	break
 	case "knife": 
-		image_speed = 1
+		
+		//Melee Combat
+		if(key_attack and state == "passive") {
+			image_speed = 1
+			state = "attack"
+		} else if(not key_attack and state == "passive") {
+			image_speed = 0	
+			state = "passive"
+		}
+		//Animate
+		if (image_speed > 0) {//Check if current frame is the last frame in sprite
+			if image_index > image_number - 1 {
+				image_speed = 0
+				state = "passive"
+				image_index = 0
+			}
+		}
 	break
 }
