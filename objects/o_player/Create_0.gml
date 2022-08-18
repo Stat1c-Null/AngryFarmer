@@ -9,6 +9,7 @@ is_moving = false
 firingdelay = 0
 recoil = 0
 state = "passive"
+hit = false
 //Handgun
 global.weapon_equipped = "handgun"
 handgun_fire_del_amount = 10 //Length between pistol shots

@@ -76,6 +76,7 @@ switch(global.weapon_equipped){
 		} else if(not key_attack and state == "passive") {
 			image_speed = 0	
 			state = "passive"
+			hit = false
 		}
 		//Animate
 		if (image_speed > 0) {//Check if current frame is the last frame in sprite
