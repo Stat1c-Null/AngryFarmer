@@ -17,7 +17,7 @@ if(key_sprint and stamina > 0.1 and is_moving)
 } else {
 	if (stamina < max_stamina) stamina += 0.2 // Regen stamina if its below 100
 	horiz_spd = horiz * move_speed
-	ver_spd = ver * move_speed 		
+	ver_spd = ver * move_speed
 }
 
 //Collision with the wall
