@@ -39,6 +39,7 @@
     {"id":{"name":"o_pause","path":"objects/o_pause/o_pause.yy",},},
     {"id":{"name":"s_bullet_particle","path":"sprites/s_bullet_particle/s_bullet_particle.yy",},},
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},},
+    {"id":{"name":"s_wall","path":"sprites/s_wall/s_wall.yy",},},
     {"id":{"name":"Approach","path":"scripts/Approach/Approach.yy",},},
     {"id":{"name":"s_zombie","path":"sprites/s_zombie/s_zombie.yy",},},
     {"id":{"name":"o_object","path":"objects/o_object/o_object.yy",},},

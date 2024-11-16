@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_object",
-    "path": "sprites/s_object/s_object.yy",
+    "name": "s_wall",
+    "path": "sprites/s_wall/s_wall.yy",
   },
   "spriteMaskId": null,
   "visible": true,

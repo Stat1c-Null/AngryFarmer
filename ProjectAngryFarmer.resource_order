@@ -21,6 +21,7 @@
     {"name":"o_bullet","order":3,"path":"objects/o_bullet/o_bullet.yy",},
     {"name":"o_pause","order":7,"path":"objects/o_pause/o_pause.yy",},
     {"name":"s_bullet_particle","order":7,"path":"sprites/s_bullet_particle/s_bullet_particle.yy",},
+    {"name":"s_wall","order":12,"path":"sprites/s_wall/s_wall.yy",},
     {"name":"Approach","order":3,"path":"scripts/Approach/Approach.yy",},
     {"name":"o_object","order":5,"path":"objects/o_object/o_object.yy",},
     {"name":"s_grass","order":2,"path":"sprites/s_grass/s_grass.yy",},
